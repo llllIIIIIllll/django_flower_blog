@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% load staticfiles %}
+{% block title %} 花卉识别 {% endblock title %}
+{% block content %}
+  {% if flower_name %}
+      <div class="container">
+    <div class="row">
+      <div class="col-6 mx-auto">
+        <h2 class="my-4">{{ flower_name }}</h2>
+        <p>{{ flower_info }}</p>
+      </div>
+    </div>
+      </div>>
+  {% else %}
+    <p>识别失败，请上传一张花卉图片。</p>
+  {% endif %}
+{% endblock content %}
